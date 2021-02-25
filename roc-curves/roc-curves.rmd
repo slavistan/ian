@@ -1,0 +1,16 @@
+# ROC Curves
+
+Naturally, the usage of **probabilistic classifiers** for **binary classification problems** requires a **choice of threshold** for the discretization into "positive" and "negative". Varying the threshold yields different **trade-offs between false positives and false negatives**. One type of error may be traded for the other and hence the **naive 50% cut-off point** may not be the optimal choice.
+
+The ROC curve helps finding the optimal threshold. Given input data and their subjective probabilities $\{\big(x_i, p(x_i)\big)\}_i$, ROC curves are constructed by **plotting the TPR against the FPR for different thresholds $\epsilon \in [0, 1]$**. The TPR and FPR are extracted from the **confusion matrix** corresponding to one particular choice of threshold.
+
+# TODO:
+
+- Extrempunkte (0,0), (1,1)
+- Example
+Frage: Soll Patient nach OP nach einer Woche entlassen werden?
+Ereignis (positiv) = Entlassener Patient verletzt sich zu Hause / Wunde reißt auf ...
+=> FP = wenig Schaden; Patient liegt eine weitere Woche im Bett
+=> FN = großer Schaden
+==> Hier wird eher zugunsten niedriger FNR (großer TPR) entschieden
+- AUC
